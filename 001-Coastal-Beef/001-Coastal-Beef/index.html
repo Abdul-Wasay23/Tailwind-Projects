@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal Beef</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/css/custom.css">
+</head>
+
+<body class="text-white bg-[#0c0c0d]">
+
+    <!-- Header Start -->
+    <header class="relative z-50">
+        <div
+            class="py-3 relative z-1 bg-header bg-cover bg-center before:absolute before:bg-black/70 before:content-[''] before:-z-1 before:top-0 before:left-0 before:w-full before:h-full before:opacity-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-between gap-y-4">
+                    <!-- Social Links (Order 2 on Mobile, 1 on Desktop) -->
+                    <div class="w-full lg:w-1/3 order-3 lg:order-1 flex justify-center lg:justify-start">
+                        <ul class="flex gap-3 items-center text-white list-none">
+                            <li><a href="#"
+                                    class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border-solid border-current border-2 rounded-full transition hover:bg-custom-red border-white/20 hover:border-custom-red transition-all duration-300">
+                                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                                </a></li>
+                            <li><a href="#"
+                                    class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border-solid border-current border-2 rounded-full transition hover:bg-custom-red border-white/20 hover:border-custom-red transition-all duration-300">
+                                    <i class="fa-brands fa-instagram text-sm"></i>
+                                </a></li>
+                            <li><a href="#"
+                                    class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border-solid border-current border-2 rounded-full transition hover:bg-custom-red border-white/20 hover:border-custom-red transition-all duration-300">
+                                    <i class="fa-brands fa-x-twitter text-sm"></i>
+                                </a></li>
+                            <li><a href="#"
+                                    class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border-solid border-current border-2 rounded-full transition hover:bg-custom-red border-white/20 hover:border-custom-red transition-all duration-300">
+                                    <i class="fa-brands fa-linkedin-in text-sm"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Logo (Centered on Desktop, Left on Mobile) -->
+                    <div class="w-1/2 lg:w-1/3 order-1 lg:order-2 flex justify-start lg:justify-center">
+                        <a href="index.html"
+                            class="font-cutmark text-3xl xs:text-2xl sm:text-2xl text-white uppercase leading-none sm">
+                            Coastal Beef
+                        </a>
+                    </div>
+
+                    <!-- Actions (Right aligned) -->
+                    <div class="w-1/2 lg:w-1/3 order-2 lg:order-3 flex justify-end items-center gap-4 md:gap-8">
+                        <!-- Mobile Menu Reverse: row-reverse for xs-sm as per user CSS -->
+                        <div class="flex items-center gap-4 flex-row-reverse sm:flex-row">
+                            <!-- Cart -->
+                            <a href="cart.html" class="relative z-1 w-8 h-8 flex items-center justify-center">
+                                <span
+                                    class="absolute -top-1 -right-1 text-xs text-white font-cutmark bg-custom-red w-4 h-4 flex items-center justify-center rounded-full leading-none">0</span>
+                                <i class="fa-solid fa-cart-shopping text-white text-lg"></i>
+                            </a>
+                            <!-- Phone (Hidden on xs, shown on sm+) -->
+                            <div class="hidden sm:flex items-center gap-3">
+                                <a href="tel:123-456-789"
+                                    class="w-10 h-10 bg-dark-gray flex items-center justify-center rounded-full transition hover:bg-custom-red">
+                                    <i class="fa-solid fa-phone text-white text-xs"></i>
+                                </a>
+                                <div class="hidden xl:block">
+                                    <h6 class="text-white text-[10px] font-montserrat uppercase font-bold opacity-60">
+                                        Call Anytime</h6>
+                                    <a href="tel:123-456-789"
+                                        class="text-white text-xs font-montserrat uppercase font-bold">123-456-789</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hamburger Menu Button -->
+                        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Desktop Navigation (Hidden on mobile/tablet) -->
+        <div class="bottom-bar hidden lg:block bg-white shadow-md w-fit mx-auto px-5">
+            <div class="container mx-auto">
+                <div class="w-full flex justify-center">
+                    <ul id="menu" class="flex items-center">
+                        <li><a href="index.html"
+                                class="font-bold font-montserrat uppercase text-black py-6 px-8 flex items-center justify-center relative z-10 before:content-[''] before:absolute before:inset-0 before:bg-custom-red before:-z-1 before:h-0 hover:before:h-full hover:text-white transition-all duration-300">Home</a>
+                        </li>
+                        <li><a href="aboutus.html"
+                                class="font-bold font-montserrat uppercase text-black py-6 px-8 flex items-center justify-center relative z-10 before:content-[''] before:absolute before:inset-0 before:bg-custom-red before:-z-1 before:h-0 hover:before:h-full hover:text-white transition-all duration-300">About
+                                Us</a></li>
+                        <li><a href="shop.html"
+                                class="font-bold font-montserrat uppercase text-black py-6 px-8 flex items-center justify-center relative z-10 before:content-[''] before:absolute before:inset-0 before:bg-custom-red before:-z-1 before:h-0 hover:before:h-full hover:text-white transition-all duration-300">Shop</a>
+                        </li>
+                        <li><a href="contactus.html"
+                                class="font-bold font-montserrat uppercase text-black py-6 px-8 flex items-center justify-center relative z-10 before:content-[''] before:absolute before:inset-0 before:bg-custom-red before:-z-1 before:h-0 hover:before:h-full hover:text-white transition-all duration-300">Contact
+                                Us</a></li>
+                        <li><a href="shop.html"
+                                class="font-bold font-montserrat uppercase text-black py-6 px-8 flex items-center justify-center relative z-10 before:content-[''] before:absolute before:inset-0 before:bg-custom-red before:-z-1 before:h-0 hover:before:h-full hover:text-white transition-all duration-300">Order
+                                Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container (Hidden by default) -->
+        <div id="mobile-nav"
+            class="lg:hidden fixed inset-0 bg-black/95 z-[100] transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-10">
+                    <button id="close-mobile-menu" class="text-white text-3xl">&times;</button>
+                </div>
+                <ul class="flex flex-col gap-6 text-center">
+                    <li><a href="index.html"
+                            class="font-cutmark text-2xl uppercase hover:text-custom-red transition-colors">Home</a>
+                    </li>
+                    <li><a href="aboutus.html"
+                            class="font-cutmark text-2xl uppercase hover:text-custom-red transition-colors">About Us</a>
+                    </li>
+                    <li><a href="shop.html"
+                            class="font-cutmark text-2xl uppercase hover:text-custom-red transition-colors">Shop</a>
+                    </li>
+                    <li><a href="contactus.html"
+                            class="font-cutmark text-2xl uppercase hover:text-custom-red transition-colors">Contact
+                            Us</a></li>
+                    <li><a href="shop.html"
+                            class="font-cutmark text-2xl uppercase hover:text-custom-red transition-colors">Order
+                            Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Banner Start -->
+    <section class="banner-sec relative overflow-hidden py-10 md:py-20 lg:py-28">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <!-- Left Content (Slider) -->
+                <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 mb-10 md:mb-0">
+                    <div class="banner-slider-container relative">
+                        <div class="banner-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide cursor-grab active:cursor-grabbing">
+                                    <div class="banner_text flex flex-col items-start gap-4 md:gap-0 lg:gap-0">
+                                        <h1
+                                            class="font-cutmark text-4xl xs:text-8xl sm:text-7xl md:text-5xl lg:text-6xl uppercase leading-tight">
+                                            Pasture <br>
+                                            <span class="text-custom-red">Raised Beef</span>
+                                        </h1>
+                                        <p class="max-w-md text-white/80 font-montserrat">
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                        </p>
+                                        <a class="btn-1 mt-6" href="aboutus.html">
+                                            Read More
+                                            <span><img src="images/btn-arrow.png" alt="arrow"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide cursor-grab active:cursor-grabbing">
+                                    <div class="banner_text flex flex-col items-start gap-4 md:gap-0 lg:gap-0">
+                                        <h1
+                                            class="font-cutmark text-4xl xs:text-8xl sm:text-7xl md:text-5xl lg:text-6xl uppercase leading-tight">
+                                            Pasture <br>
+                                            <span class="text-custom-red">Raised Beef</span>
+                                        </h1>
+                                        <p class="max-w-md text-white/80 font-montserrat">
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                        </p>
+                                        <a class="btn-1 mt-6" href="aboutus.html">
+                                            Read More
+                                            <span><img src="images/btn-arrow.png" alt="arrow"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Banner Progress Bar -->
+                        <div
+                            class="banner-progress flex items-center gap-4 mt-12 md:mt-0 md:absolute md:-bottom-10 lg:-bottom-10 w-full">
+                            <span class="banner-current text-white font-cutmark text-xl">01</span>
+                            <div class="banner-progress-bar flex-grow h-1 bg-white/20 rounded-full overflow-hidden">
+                                <div
+                                    class="banner-progress-bar-fill h-full bg-custom-red w-0 transition-all duration-300">
+                                </div>
+                            </div>
+                            <span class="banner-total text-white font-cutmark text-xl">02</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content (Image & Video) -->
+                <div class="w-full md:w-[45%] lg:w-1/2 xl:w-1/2">
+                    <div class="banner-right-box relative pl-0 md:pl-10">
+                        <!-- Beef Piece (Floating) -->
+                        <img src="images/beef-piece.png" alt="beef-piece"
+                            class="absolute -bottom-8 -right-8 xs:-bottom-10 md:!w-[100px] xs:-right-10 md:bottom-20 md:-right-20 z-20 w-20 xs:w-28 md:w-auto animate-bounce duration-[3000ms]">
+                        <!-- Main Banner Image Wrapper -->
+                        <div class="banner-image-container relative z-10 pt-8 xs:pt-16 md:pt-0">
+                            <img src="images/banner-img.png" alt="banner-img" class="w-full h-auto object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- About Section Start -->
+    <section
+        class="about-sec relative z-10 py-12 lg:py-20 after:bg-[url('/images/about-bg.jpg')] after:bg-cover after:bg-center after:bg-no-repeat after:absolute after:bottom-0 after:right-0 after:w-full after:h-full after:-z-20 before:content-[''] before:absolute before:bg-[#000000e7] before:bottom-0 before:right-0 before:w-full before:h-full before:-z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-3 gap-y-12 lg:gap-y-0">
+                <div class="w-full md:w-1/2 lg:w-1/2 px-3">
+                    <div class="about-img relative z-10">
+                        <img src="images/about.jpg" alt="img"
+                            class="object-cover w-full h-[500px] sm:h-[500px] md:h-[600px] lg:h-[600px]">
+                        <img src="images/about-top.jpg" alt="img"
+                            class="object-cover w-[130px] h-[90px] sm:w-[180px] sm:h-[120px] lg:w-[220px] lg:h-[150px] border-4 sm:border-8 border-[#b20031] absolute top-0 right-0">
+                        <div class="year-text absolute bottom-0 left-0 flex flex-wrap items-center justify-center">
+                            <span
+                                class="font-cutmark text-center px-4 py-3 sm:px-6 sm:py-5 text-sm sm:text-base lg:text-1xl uppercase text-white bg-black writing-sideways-lr font-bold">
+                                Years Of <br>
+                                Experience
+                            </span>
+                            <span
+                                class="font-cutmark text-center px-4 py-[19px] sm:px-5 sm:py-[38.5px] bg-custom-red text-3xl sm:text-6xl uppercase text-white font-bold">
+                                25+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/2 px-3">
+                    <div class="about-text">
+                        <h2 class="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-cutmark text-white mb-4!">
+                            About
+                            <span class="text-custom-red block lg:inline xl:block">
+                                Raised Beef
+                            </span>
+                        </h2>
+                        <p class="mb-4!">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam,
+                            eaque ipsa quae inventore et architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                            voluptatem
+                        </p>
+                        <p class="mb-4!">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam,
+                            eaque ipsa quae inventore et architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                            voluptatem
+                        </p>
+                        <p class="mb-4!">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam,
+                            eaque ipsa quae inventore et architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                            voluptatem
+                        </p>
+                        <ul class="about-list flex flex-wrap gap-5 mb-5">
+                            <li class="flex flex-wrap gap-3 items-center">
+                                <img src="images/about-icon1.png" alt="img" class="object-contain w-8 h-8">
+                                <p class="opacity-100! m-0!">Health and Safety</p>
+                            </li>
+                            <li class="flex flex-wrap gap-3 items-center">
+                                <img src="images/about-icon2.png" alt="img" class="object-contain w-8 h-8">
+                                <p class="opacity-100! m-0!">100% Fresh Produce</p>
+                            </li>
+                        </ul>
+                        <div class="progress-section my-5">
+                            <span class="block mb-2 text-white font-montserrat">Quality of Meat</span>
+
+                            <div class="progress-bar relative w-full h-3 bg-transparent overflow-visible">
+                                <div
+                                    class="progress-fill relative h-full w-0 bg-[#b20031] transition-all duration-2000 ease-in-out">
+                                    <div
+                                        class="progress-text absolute right-[0%] -top-5 text-white font-montserrat font-medium text-sm leading-6 whitespace-nowrap">
+                                        0%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="btn-1" href="aboutus.html">
+                            Read More
+                            <span>
+                                <img src="images/btn-arrow.png" class="relative z-10 object-contain" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- New Arrivals Start -->
+    <section class="arrival-sec py-20">
+        <div class="container mx-auto px-4">
+            <div class="arrival-heading text-center mb-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-cutmark text-white">
+                    New Arrivals
+                </h2>
+                <p class="max-w-2xl mx-auto text-white/60 font-montserrat">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa
+                </p>
+            </div>
+            <div class="arrival-swiper swiper">
+                <div class="swiper-wrapper">
+                    <!-- Product 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product1.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="span-p text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for Product 2-4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product2.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product3.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product4.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product1.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="span-p text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Arrivals End -->
+
+    <!-- Categories Section Start -->
+    <section class="categ-sec relative py-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <img src="images/about-bg.jpg" alt="overlay-bg-img" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/95"></div>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="arrival-heading text-center mb-12">
+                <h2 class="font-cutmark text-white uppercase mb-6 text-4xl">
+                    Shop By Categories
+                </h2>
+                <p class="max-w-2xl mx-auto text-white/60 font-montserrat xs:text-[12px] md:text-[12px]">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-1">
+                <!-- Large Card -->
+                <div class="md:col-span-1">
+                    <div
+                        class="categ-card group relative overflow-hidden h-[300px] sm:h-[400px] md:h-[560px] lg:h-[600px]">
+                        <a href="shop.html" class="block h-full">
+                            <img src="images/categ1.jpg" alt="categ-img"
+                                class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                        </a>
+                        <div class="absolute top-10 left-10 xs:top-4 xs:left-4 md:top-3 md:left-3 lg:absolute">
+                            <h5 class="text-white text-3xl font-cutmark mb-4 leading-tight">Premium <br> Steaks</h5>
+                            <a href="shop.html"
+                                class="text-white uppercase underline decoration-white underline-offset-4 hover:text-custom-red hover:decoration-custom-red transition-colors duration-300">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Grid -->
+                <div class="md:col-span-2 flex flex-col gap-6 md:gap-1">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-1">
+                        <!-- Card 2 -->
+                        <div class="md:col-span-1.33 group relative h-[280px] overflow-hidden">
+                            <a href="shop.html" class="block h-full">
+                                <img src="images/categ2.jpg" alt="categ-img"
+                                    class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                            </a>
+                            <div class="absolute top-8 left-8 md:top-3 md:left-3">
+                                <h5 class="text-white text-2xl font-cutmark mb-4 leading-tight">Ground Beef <br> &
+                                    Patties</h5>
+                                <a href="shop.html"
+                                    class="text-white uppercase underline decoration-white underline-offset-4 hover:text-custom-red hover:decoration-custom-red transition-colors duration-300">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="md:col-span-0.67 group relative h-[280px] overflow-hidden">
+                            <a href="shop.html" class="block h-full">
+                                <img src="images/categ3.jpg" alt="categ-img"
+                                    class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                            </a>
+                            <div class="absolute top-8 left-8 md:top-3 md:left-3">
+                                <h5 class="text-white text-2xl font-cutmark mb-4 leading-tight">Boxes <br> & Bundles
+                                </h5>
+                                <a href="shop.html"
+                                    class="text-white uppercase underline decoration-white underline-offset-4 hover:text-custom-red hover:decoration-custom-red transition-colors duration-300">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-1">
+                        <!-- Card 4 -->
+                        <div class="md:col-span-1 group relative h-[280px] overflow-hidden">
+                            <a href="shop.html" class="block h-full">
+                                <img src="images/categ4.jpg" alt="categ-img"
+                                    class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                            </a>
+                            <div class="absolute top-8 left-8 md:top-3 md:left-3">
+                                <h5 class="text-white text-2xl font-cutmark mb-4 leading-tight">Beef Shank</h5>
+                                <a href="shop.html"
+                                    class="text-white uppercase underline decoration-white underline-offset-4 hover:text-custom-red hover:decoration-custom-red transition-colors duration-300">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="md:col-span-2 group relative h-[280px] overflow-hidden">
+                            <a href="shop.html" class="block h-full">
+                                <img src="images/categ5.jpg" alt="categ-img"
+                                    class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110">
+                            </a>
+                            <div class="absolute top-8 left-8 md:top-3 md:left-3">
+                                <h5 class="text-white text-2xl font-cutmark mb-4 leading-tight">Roasts & Briskets</h5>
+                                <a href="shop.html"
+                                    class="text-white uppercase underline decoration-white underline-offset-4 hover:text-custom-red hover:decoration-custom-red transition-colors duration-300">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+    <!-- Featured Products Start -->
+    <section class="feature-sec py-20">
+        <div class="container mx-auto px-4">
+            <div class="feature-heading text-center mb-12">
+                <h2 class="text-4xl md:text-4xl lg:text-6xl font-cutmark text-white">
+                    Featured Products
+                </h2>
+                <p class="max-w-2xl mx-auto text-white/60 font-montserrat">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa
+                </p>
+            </div>
+            <div class="feature-swiper swiper">
+                <div class="swiper-wrapper">
+                    <!-- Product 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product1.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="span-p text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="product-card group relative mt-5 mb-10 transition-all duration-300">
+                            <div class="product-card-image overflow-hidden">
+                                <a href="shop-detail.html">
+                                    <img src="images/product2.jpg" alt="product-img"
+                                        class="w-full h-[270px] object-cover transition-transform duration-300 group-hover:scale-110">
+                                </a>
+                            </div>
+                            <div
+                                class="product-card-text relative z-10 p-5 flex flex-col gap-2.5 transition-all duration-300 bg-white shadow-sm overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-custom-red w-0 transition-all duration-300 group-hover:w-full -z-10">
+                                </div>
+                                <ul class="rating-list flex items-center justify-between">
+                                    <li
+                                        class="text-black group-hover:text-white uppercase font-semibold text-xs transition-colors duration-300">
+                                        Lorem Ipsum</li>
+                                    <li class="flex items-center gap-1">
+                                        <i
+                                            class="fa-solid fa-star text-black group-hover:text-white transition-colors duration-300 text-sm"></i>
+                                        <span
+                                            class="rating text-black group-hover:text-white transition-colors duration-300 font-semibold text-xs">(4.5)</span>
+                                    </li>
+                                </ul>
+                                <h6
+                                    class="uppercase text-2xl font-cutmark text-black group-hover:text-white transition-colors duration-300 mb-0 ">
+                                    products Name Here</h6>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <a class="btn-1 group-hover:after:bg-black! transition-all" href="shop-detail.html">
+                                        Shop Now
+                                        <span class="group-hover:ml-2 group-hover:scale-110 transition-all"><img
+                                                src="images/btn-arrow.png" alt="arrow"></span>
+                                    </a>
+                                    <span
+                                        class="price text-black group-hover:text-white transition-colors duration-300 font-bold">$80.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Products End -->
+
+    <!-- How It Works Start -->
+    <section class="work-sec relative py-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <img src="images/about-bg.jpg" alt="overlay-bg-img" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/80"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-0">
+            <div class="work-heading text-center mb-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-cutmark text-white uppercase">
+                    How It Works
+                </h2>
+                <p class="max-w-2xl mx-auto text-white/60 font-montserrat">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2">
+                        <img src="images/work1.jpg" alt="work-img1" class="w-full h-[500px] object-cover md:h-[350px]">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-custom-red p-10 md:p-5 flex flex-col justify-between text-white relative group">
+                        <h3 class="text-6xl font-cutmark text-right opacity-30">01</h3>
+                        <div class="flex flex-col gap-4">
+                            <img src="images/work-icon1.png" alt="work-icon" class="w-12 h-12 object-contain">
+                            <h5 class="text-2xl font-cutmark uppercase">We Source</h5>
+                            <p class="text-white opacity-100 font-montserrat text-sm leading-relaxed">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque
+                                laudantium, totam rem aperiam, eaque ipsa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2">
+                        <img src="images/work2.jpg" alt="work-img2" class="w-full h-[500px] object-cover md:h-[350px]">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-custom-red p-10 md:p-5 flex flex-col justify-between text-white relative group">
+                        <h3 class="text-6xl font-cutmark text-right opacity-30">02</h3>
+                        <div class="flex flex-col gap-4">
+                            <img src="images/work-icon2.png" alt="work-icon" class="w-12 h-12 object-contain">
+                            <h5 class="text-2xl font-cutmark uppercase">You Choose</h5>
+                            <p class="text-white opacity-100 font-montserrat text-sm leading-relaxed">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque
+                                laudantium, totam rem aperiam, eaque ipsa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row md:flex-row-reverse">
+                    <div class="w-full md:w-1/2">
+                        <img src="images/work3.jpg" alt="work-img3" class="w-full h-[500px] object-cover md:h-[350px]">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-custom-red p-10 md:p-5 flex flex-col justify-between text-white relative group">
+                        <h3 class="text-6xl font-cutmark text-right opacity-30">03</h3>
+                        <div class="flex flex-col gap-4">
+                            <img src="images/work-icon1.png" alt="work-icon" class="w-12 h-12 object-contain">
+                            <h5 class="text-2xl font-cutmark uppercase">We Deliver</h5>
+                            <p class="text-white opacity-100 font-montserrat text-sm leading-relaxed">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque
+                                laudantium, totam rem aperiam, eaque ipsa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex flex-col md:flex-row md:flex-row-reverse">
+                    <div class="w-full md:w-1/2">
+                        <img src="images/work4.jpg" alt="work-img4" class="w-full h-[500px] object-cover md:h-[350px]">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-custom-red p-10 md:p-5 flex flex-col justify-between text-white relative group">
+                        <h3 class="text-6xl font-cutmark text-right opacity-30">04</h3>
+                        <div class="flex flex-col gap-4">
+                            <img src="images/work-icon3.png" alt="work-icon" class="w-12 h-12 object-contain">
+                            <h5 class="text-2xl font-cutmark uppercase">You Enjoy</h5>
+                            <p class="text-white opacity-100 font-montserrat text-sm leading-relaxed">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque
+                                laudantium, totam rem aperiam, eaque ipsa
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How It Works End -->
+
+    <!-- Testimonials Start -->
+    <section class="testi-sec relative py-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-[#0c0c0d]">
+            <!-- Placeholder for background image if needed -->
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="arrival-heading text-center mb-12">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-cutmark text-white">
+                    Our Testimonials
+                </h2>
+                <p class="max-w-2xl mx-auto text-white/60 font-montserrat">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa
+                </p>
+            </div>
+
+            <div class="testi-swiper swiper mb-12">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="testimonial-box group relative p-8 h-full flex flex-col transition-all duration-300">
+                            <div class="absolute inset-0 -z-10 bg-black/85"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-0 bg-custom-red transition-all duration-300 group-hover:h-full -z-5">
+                            </div>
+
+                            <img src="images/quote.png" alt="quote"
+                                class="w-12 mb-8 group-hover:brightness-0 group-hover:invert transition-all">
+                            <p
+                                class="text-white/80 font-montserrat text-sm leading-relaxed mb-10 group-hover:text-white transition-all">
+                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam,
+                                eaque ipsa quae ab illo inventore veritatiset
+                            </p>
+
+                            <ul class="testi-list flex items-center gap-5 pt-5 border-t border-white/10 mt-auto">
+                                <li><img src="images/testi1.jpg" alt="user" class="w-14 h-14 rounded-full object-cover">
+                                </li>
+                                <li>
+                                    <h6 class="text-white font-cutmark text-lg mb-0">John Doe <span
+                                            class="block text-xs font-montserrat font-normal opacity-60">Company
+                                            Ipsum</span></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="testimonial-box group relative p-8 h-full flex flex-col transition-all duration-300">
+                            <div class="absolute inset-0 -z-10 bg-black/85"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-0 bg-custom-red transition-all duration-300 group-hover:h-full -z-5">
+                            </div>
+
+                            <img src="images/quote.png" alt="quote"
+                                class="w-12 mb-8 group-hover:brightness-0 group-hover:invert transition-all">
+                            <p
+                                class="text-white/80 font-montserrat text-sm leading-relaxed mb-10 group-hover:text-white transition-all">
+                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam,
+                                eaque ipsa quae ab illo inventore veritatiset
+                            </p>
+
+                            <ul class="testi-list flex items-center gap-5 pt-5 border-t border-white/10 mt-auto">
+                                <li><img src="images/testi2.jpg" alt="user" class="w-14 h-14 rounded-full object-cover">
+                                </li>
+                                <li>
+                                    <h6 class="text-white font-cutmark text-lg mb-0">John Doe <span
+                                            class="block text-xs font-montserrat font-normal opacity-60">Company
+                                            Ipsum</span></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="testimonial-box group relative p-8 h-full flex flex-col transition-all duration-300">
+                            <div class="absolute inset-0 -z-10 bg-black/85"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-0 bg-custom-red transition-all duration-300 group-hover:h-full -z-5">
+                            </div>
+
+                            <img src="images/quote.png" alt="quote"
+                                class="w-12 mb-8 group-hover:brightness-0 group-hover:invert transition-all">
+                            <p
+                                class="text-white/80 font-montserrat text-sm leading-relaxed mb-10 group-hover:text-white transition-all">
+                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam,
+                                eaque ipsa quae ab illo inventore veritatiset
+                            </p>
+
+                            <ul class="testi-list flex items-center gap-5 pt-5 border-t border-white/10 mt-auto">
+                                <li><img src="images/testi3.jpg" alt="user" class="w-14 h-14 rounded-full object-cover">
+                                </li>
+                                <li>
+                                    <h6 class="text-white font-cutmark text-lg mb-0">John Doe <span
+                                            class="block text-xs font-montserrat font-normal opacity-60">Company
+                                            Ipsum</span></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="testimonial-box group relative p-8 h-full flex flex-col transition-all duration-300">
+                            <div class="absolute inset-0 -z-10 bg-black/85"></div>
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-0 bg-custom-red transition-all duration-300 group-hover:h-full -z-5">
+                            </div>
+
+                            <img src="images/quote.png" alt="quote"
+                                class="w-12 mb-8 group-hover:brightness-0 group-hover:invert transition-all">
+                            <p
+                                class="text-white/80 font-montserrat text-sm leading-relaxed mb-10 group-hover:text-white transition-all">
+                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
+                                aperiam,
+                                eaque ipsa quae ab illo inventore veritatiset
+                            </p>
+
+                            <ul class="testi-list flex items-center gap-5 pt-5 border-t border-white/10 mt-auto">
+                                <li><img src="images/testi1.jpg" alt="user" class="w-14 h-14 rounded-full object-cover">
+                                </li>
+                                <li>
+                                    <h6 class="text-white font-cutmark text-lg mb-0">John Doe <span
+                                            class="block text-xs font-montserrat font-normal opacity-60">Company
+                                            Ipsum</span></h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Navigation and Progress Bar -->
+            <div class="flex items-center justify-center gap-10">
+                <button
+                    class="testi-prev cursor-pointer w-12 h-12 rounded-full border border-white flex items-center justify-center rotate-180 transition-all hover:bg-custom-red hover:border-custom-red">
+                    <img src="images/slider-arrow.png" alt="prev">
+                </button>
+
+                <div class="w-1/3 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div class="testi-progress h-full bg-custom-red w-0 transition-all duration-300"></div>
+                </div>
+
+                <button
+                    class="testi-next cursor-pointer w-12 h-12 rounded-full border border-white flex items-center justify-center transition-all hover:bg-custom-red hover:border-custom-red">
+                    <img src="images/slider-arrow.png" alt="next">
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-sec bg-[#161717] pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center sm:text-left">
+                <!-- Col 1 -->
+                <div class="flex flex-col items-center sm:items-start">
+                    <div class="mb-6">
+                        <a href="index.html" class="text-white font-cutmark text-3xl uppercase">Coastal Beef</a>
+                    </div>
+                    <p class="text-white/80 font-montserrat text-sm mb-8">
+                        Sed ut perspiciatis unde <br> omnis iste natus error
+                    </p>
+                    <ul class="flex gap-3">
+                        <li><a href="#"
+                                class="w-10 h-10 rounded-full bg-[#3b5998] flex items-center justify-center text-white hover:scale-110 transition-transform"><i
+                                    class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"
+                                class="w-10 h-10 rounded-full bg-[#0e76a8] flex items-center justify-center text-white hover:scale-110 transition-transform"><i
+                                    class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="#"
+                                class="w-10 h-10 rounded-full bg-[#1da1f2] flex items-center justify-center text-white hover:scale-110 transition-transform"><i
+                                    class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"
+                                class="w-10 h-10 rounded-full bg-[#e1306c] flex items-center justify-center text-white hover:scale-110 transition-transform"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h5 class="text-white text-xl font-cutmark mb-8 uppercase">Quick Links</h5>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Home</a>
+                        </li>
+                        <li><a href="aboutus.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">About
+                                Us</a></li>
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Shop</a>
+                        </li>
+                        <li><a href="contactus.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h5 class="text-white text-xl font-cutmark mb-8 uppercase">Contact Info</h5>
+                    <ul class="flex flex-col gap-6 items-center sm:items-start">
+                        <li class="flex gap-4">
+                            <i class="fas fa-map-marker-alt text-custom-red text-xl"></i>
+                            <p class="text-white/80 font-montserrat text-sm">Lorem Ipsum Dolor SitAmet <br> Adipscing
+                                Elit</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-envelope text-custom-red text-xl"></i>
+                            <a href="mailto:Info@DemoLink.com"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Info@DemoLink.com</a>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="fas fa-phone text-custom-red text-xl"></i>
+                            <a href="tel:+123-456-789"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">+123-456-789</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h5 class="text-white text-xl font-cutmark mb-8 uppercase">Products</h5>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Beef
+                                Steaks</a></li>
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Ground
+                                Beef</a></li>
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Beef
+                                Bundles</a></li>
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">Roast
+                                & Briskets</a></li>
+                        <li><a href="shop.html"
+                                class="text-white/80 font-montserrat text-sm hover:text-custom-red transition-colors">All
+                                Products</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Nav -->
+            <div
+                class="border-t border-white/10 py-6 flex flex-wrap justify-between items-center gap-6 text-center sm:text-left">
+                <p class="text-white/60 font-montserrat text-xs w-full sm:w-auto">Copyright © 2025 Coastal Beef All
+                    rights reserved</p>
+                <img src="images/bottom-img.png" alt="payments" class="object-contain mx-auto sm:mx-0">
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/js/custom.js"></script>
+</body>
+
+</html>
