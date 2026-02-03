@@ -4,9 +4,7 @@ Collection of frontend projects built using **HTML and Tailwind CSS**, focused o
 
 ---
 
-## 📂 Project Categories
-
-### 🛒 E-Commerce
+## 📂 Project
 
 | Project | Category | Links |
 |---------|---------|-------|
